@@ -8,8 +8,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Notes-sass",
-  description: "Sass application.",
+  title: "lappsnet",
+  description: "lappsnet website.",
 };
 
 export default async function RootLayout({

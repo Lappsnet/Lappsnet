@@ -13,7 +13,7 @@ export default async function HomePage() {
                 id="colorChangingBadge"
                 className="px-2 py-1 text-xs font-semibold rounded-full transition-colors duration-[3000ms] ease-in-out"
               >
-                DanDevNotes Beta
+                Lappsnet
               </span>
               <h1 className="font-bold pb-1 text-2xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
                 Elevate Your Note-Taking with AI-Powered Insights
@@ -26,7 +26,7 @@ export default async function HomePage() {
             </div>
             <Link href="/" className="mx-auto">
               <Button variant="outline" className="max-w-sm" type="submit">
-                Go to Dashboard
+                See more information
               </Button>
             </Link>
           </div>

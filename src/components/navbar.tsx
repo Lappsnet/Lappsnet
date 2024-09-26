@@ -10,16 +10,8 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import {
-  LoginLink,
-  LogoutLink,
-} from "@kinde-oss/kinde-auth-nextjs/components";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 export default async function NavbarV0() {
-  const { isAuthenticated, getUser } = getKindeServerSession();
-  const user = await getUser();
-
   return (
     <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
       <Sheet>
@@ -48,59 +40,44 @@ export default async function NavbarV0() {
             </Link>
           </div>
           <div className="flex-grow flex flex-col">
-            {!(await isAuthenticated()) ? (
-              <div className="gap-3">
-                <Alert className="w-full bg-zinc-800 mb-3">
-                  <AlertTitle>Heads up!</AlertTitle>
-                  <AlertDescription className="text-sm w-full">
-                    Join us to access all features!
-                  </AlertDescription>
-                </Alert>
-                <LoginLink className="items-start text-base font-semibold pr-3 my-2">
-                  <Button variant="outline" size="sm">
-                    Login
-                  </Button>
-                </LoginLink>
-              </div>
-            ) : (
-              <>
-                <Link
-                  href="/"
-                  className="flex justify-start lg:hidden hover:bg-neutral-700 py-2"
-                  prefetch={false}
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/dashboard"
-                  className="flex justify-start py-2 lg:hidden hover:bg-neutral-700"
-                  prefetch={false}
-                >
-                  Dashboard
-                </Link>
-                <Link
-                  href="/billing"
-                  className="flex justify-start py-2 lg:hidden hover:bg-neutral-700"
-                  prefetch={false}
-                >
-                  Billing
-                </Link>
-                <Link
-                  href="/settings"
-                  className="flex justify-start py-2 lg:hidden hover:bg-neutral-700"
-                  prefetch={false}
-                >
-                  Settings
-                </Link>
-                <LogoutLink className="text-sm text-accent-foreground hover:underline">
-                  <Button variant="secondary" size="sm">
-                    Log out
-                  </Button>
-                </LogoutLink>
-              </>
-            )}
+            <div className="gap-3">
+              <Alert className="w-full bg-zinc-800 mb-3">
+                <AlertTitle>Heads up!</AlertTitle>
+                <AlertDescription className="text-sm w-full">
+                  Join us to access all features!
+                </AlertDescription>
+              </Alert>
+            </div>
+            <Link
+              href="/"
+              className="flex justify-start lg:hidden hover:bg-neutral-700 py-2"
+              prefetch={false}
+            >
+              Home
+            </Link>
+            <Link
+              href="/dashboard"
+              className="flex justify-start py-2 lg:hidden hover:bg-neutral-700"
+              prefetch={false}
+            >
+              Dashboard
+            </Link>
+            <Link
+              href="/billing"
+              className="flex justify-start py-2 lg:hidden hover:bg-neutral-700"
+              prefetch={false}
+            >
+              Billing
+            </Link>
+            <Link
+              href="/settings"
+              className="flex justify-start py-2 lg:hidden hover:bg-neutral-700"
+              prefetch={false}
+            >
+              Settings
+            </Link>
 
-            {(await isAuthenticated()) && (
+            {/*  {(await isAuthenticated()) && (
               <div className="mt-auto p-1 bg-neutral-900 rounded-lg shadow-md">
                 <div className="flex items-center space-x-2">
                   {user?.picture ? (
@@ -126,7 +103,7 @@ export default async function NavbarV0() {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
           </div>
         </SheetContent>
       </Sheet>
@@ -141,7 +118,7 @@ export default async function NavbarV0() {
       </Link>
 
       <nav className="hidden lg:flex items-center space-x-4 ml-6">
-        {!(await isAuthenticated()) ? (
+        {/*  {!(await isAuthenticated()) ? (
           <></>
         ) : (
           <>
@@ -166,9 +143,9 @@ export default async function NavbarV0() {
               Settings
             </Link>
           </>
-        )}
+        )} */}
       </nav>
-      <div className="ml-auto hidden md:flex gap-4">
+      {/*   <div className="ml-auto hidden md:flex gap-4">
         {!(await isAuthenticated()) ? (
           <>
             <LoginLink className="items-center py-2 text-lg font-semibold">
@@ -201,7 +178,7 @@ export default async function NavbarV0() {
             </div>
           </div>
         )}
-      </div>
+      </div> */}
     </header>
   );
 }
