@@ -4,32 +4,34 @@ import Script from "next/script";
 
 export default async function HomePage() {
   return (
-    <section className="w-full h-[calc(100vh-100px)] flex items-center justify-center">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-col justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <span
-                id="colorChangingBadge"
-                className="px-2 py-1 text-xs font-semibold rounded-full transition-colors duration-[3000ms] ease-in-out"
-              >
-                Lappsnet
-              </span>
-              <h1 className="font-bold pb-1 text-2xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-                The Transformational Power of Asset Tokenization
-              </h1>
-              <p className="w-full max-w-5xl text-zinc-200 text-sm md:text-xl mx-auto pb-2">
-                Blockchain Integration for Asset Tokenization, Fireblocks Tokenization Platform.
-              </p>
-            </div>
-            <Link href="/" className="mx-auto">
-              <Button variant="outline" className="max-w-sm" type="submit">
-                See more information
-              </Button>
-            </Link>
-          </div>
+    <section className="w-full flex flex-col">
+      <div className="container h-screen px-4 md:px-6 flex-grow flex flex-col justify-center">
+        <div className="text-center mb-8">
+          <span
+            id="colorChangingBadge"
+            className="inline-block px-2 py-1 text-xs font-semibold rounded-full transition-colors duration-[3000ms] ease-in-out mb-4"
+          >
+            Lappsnet
+          </span>
+          <h1 className="font-bold text-3xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 mb-4">
+            The Transformational Power of Asset Tokenization
+          </h1>
+          <p className="text-zinc-200 text-sm md:text-xl max-w-3xl mx-auto mb-6">
+            Blockchain Integration for Asset Tokenization, Fireblocks
+            Tokenization Platform.
+          </p>
+          <Link href="/" className="inline-block">
+            <Button variant="outline" className="max-w-sm" type="submit">
+              See more information
+            </Button>
+          </Link>
         </div>
       </div>
+     {/*  <div className="w-full overflow-hidden">
+        <FireblocksScroll />
+      </div>
+      <div className="h-screen">hi</div> */}
+
       <Script id="badge-animation">
         {`
           function getRandomColor() {
