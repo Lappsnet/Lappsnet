@@ -16,12 +16,10 @@ export default async function HomePage() {
                 Lappsnet
               </span>
               <h1 className="font-bold pb-1 text-2xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-                Elevate Your Note-Taking with AI-Powered Insights
+                The Transformational Power of Asset Tokenization
               </h1>
               <p className="w-full max-w-5xl text-zinc-200 text-sm md:text-xl mx-auto pb-2">
-                Where your ideas meet artificial intelligence. Capture,
-                organize, and enhance your thoughts with smart, AI-assisted
-                note-taking with dandevnotes.
+                Blockchain Integration for Asset Tokenization, Fireblocks Tokenization Platform.
               </p>
             </div>
             <Link href="/" className="mx-auto">
