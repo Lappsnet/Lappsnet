@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import { FooterV0 } from "@/components/footer";
 import "./globals.css";
+import NavbarV0 from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default async function RootLayout({
     <html lang="es" className="h-full">
       <body className={`${inter.className} flex flex-col min-h-full`}>
         <NextTopLoader />
+        <NavbarV0/>
         <main className="flex-grow">{children}</main>
         <FooterV0 />
       </body>

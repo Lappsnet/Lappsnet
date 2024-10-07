@@ -10,7 +10,7 @@ import { AvatarIcon } from "@radix-ui/react-icons";
 
 export const FooterV0 = () => {
   return (
-    <footer className="bg-neutral-950 text-muted-foreground py-6 md:p-10 w-full bottom-0">
+    <footer className="bg-[#f1f1f1] py-6 md:p-10 w-full bottom-0">
       <div className="container max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div className="grid gap-4">
           <h3 className="text-lg font-semibold">Contacto</h3>
