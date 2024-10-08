@@ -5,8 +5,7 @@ import NextTopLoader from "nextjs-toploader";
 
 import NavbarV0 from "@/components/navbar";
 import { FooterV0 } from "@/components/footer";
-
-import "../../../src/app/globals.css";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +20,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="es" className="h-full">
-       <head>
+      <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${inter.className} flex flex-col min-h-full`}>
