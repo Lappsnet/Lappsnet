@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 export default async function AboutSection() {
   return (
-    <section className="w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center py-12 md:py-24 px-6 md:px-12 h-screen">
+    <section className="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center py-12 md:py-24 px-6 md:px-12 h-screen">
       {/* Texto de la Sección */}
       <div className="w-full md:w-2/3 flex flex-col justify-center items-start font-sans mb-10 md:mb-0">
         <h1 className="text-3xl md:text-5xl font-bold mb-6 md:mb-10">

@@ -17,7 +17,7 @@ export default function NavbarV0() {
   const handleCloseMenu = () => setIsOpen(false);
 
   return (
-    <header className="flex h-20 w-full mx-auto items-center justify-between px-4 md:px-6 bg-[#091e3a] text-white ">
+    <header className="flex h-20 w-full mx-auto items-center justify-between px-4 md:px-6 bg-gradient-to-r from-[#0c1851f1] via-[#0C184D] to-[#060e31]  text-white ">
       {/* Mobile Menu */}
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
@@ -28,7 +28,7 @@ export default function NavbarV0() {
         </SheetTrigger>
         <SheetContent
           side="left"
-          className="flex flex-col bg-[#091e3a] text-white"
+          className="flex flex-col bg-[#0B1853] text-white"
         >
           <SheetTitle></SheetTitle>
           <SheetDescription></SheetDescription>
@@ -54,7 +54,7 @@ export default function NavbarV0() {
               Home
             </Link>
             <Link
-              href="/about"
+              href="/"
               className="hover:bg-neutral-700 py-2 px-4 rounded"
               prefetch={false}
               onClick={handleCloseMenu}
@@ -62,7 +62,7 @@ export default function NavbarV0() {
               About Us
             </Link>
             <Link
-              href="/earnings"
+              href="/"
               className="hover:bg-neutral-700 py-2 px-4 rounded"
               prefetch={false}
               onClick={handleCloseMenu}
@@ -99,14 +99,14 @@ export default function NavbarV0() {
           Home
         </Link>
         <Link
-          href="/about"
+          href="/"
           className="text-sm font-medium hover:bg-neutral-700 p-2 rounded-lg"
           prefetch={false}
         >
           About Us
         </Link>
         <Link
-          href="/earnings"
+          href="/"
           className="text-sm font-medium hover:bg-neutral-700 p-2 rounded-lg"
           prefetch={false}
         >

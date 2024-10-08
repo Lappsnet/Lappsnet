@@ -2,7 +2,7 @@ import { rewardsData } from "@/utils/data-rewards";
 
 export default function Rewards() {
   return (
-    <div className="max-w-6xl mx-auto flex flex-col items-center justify-center px-4 py-14 my-10 text-center">
+    <div className="max-w-7xl mx-auto flex flex-col items-center justify-center px-4 py-14 my-10 text-center">
       <h1 className="text-3xl md:text-5xl font-bold mt-4">
         Exclusive Rewards Tiers for Maximizing Your Benefits
       </h1>
@@ -14,7 +14,7 @@ export default function Rewards() {
         {rewardsData.rewardsProgram.tiers.map((tier, index) => (
           <div
             key={index}
-            className={`flex flex-col p-4 rounded-lg shadow-sm transition duration-300 ease-in-out ${tier.color}`}
+            className={`flex flex-col p-4 rounded-lg border border-gray-300 shadow-sm transition duration-300 ease-in-out ${tier.color}`}
           >
             <h6 className="mb-4 text-xl font-medium ">
               {tier.name}

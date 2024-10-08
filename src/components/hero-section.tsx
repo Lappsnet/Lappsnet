@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { ArrowRightIcon, LockOpen1Icon } from "@radix-ui/react-icons";
+import Image from "next/image";
 
 export default async function HeroSection() {
   return (
-    <main className="w-full bg-[#091e3a]">
+    <main className="w-full bg-gradient-to-r from-[#0c1851f1] via-[#0C184D] to-[#060e31] ">
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center py-12 md:py-24  md:px-12 h-screen">
-        <div className="w-full md:w-2/3 flex flex-col justify-center items-start text-white mb-10 md:mb-0 font-sans px-6">
+        <div className="w-full flex flex-col justify-center items-start text-white mb-10 md:mb-0 font-sans px-6">
           <h5 className="text-lg md:text-xl font-semibold uppercase mb-4">
             Empower Your Finances with XFY D-Money
           </h5>
@@ -25,11 +26,13 @@ export default async function HeroSection() {
             Get Started Today
           </button>
         </div>
-        <div className="w-full md:w-1/3 flex justify-center items-center">
-          <img
-            src="/logo-white.png"
+        <div className="w-full flex items-center justify-center ">
+          <Image
+            width={1000}
+            height={1000}
+            src="/tron.png"
             alt="XFY Tokenization Engine"
-            className="w-auto h-24 md:h-96 object-contain"
+            className=" w-full h-full pr-10 md:pr-0 opacity-border" /* Ajusta el tamaño de la imagen */
           />
         </div>
       </section>
@@ -51,7 +54,7 @@ export default async function HeroSection() {
         </div>
         <div className="grid gap-6 md:gap-8 px-4 md:px-0 lg:grid-cols-3 text-white">
           {/* Feature 1 */}
-          <div className="space-y-4 rounded-lg bg-[#0b203a] shadow-md">
+          <div className="space-y-4 rounded-lg bg-[#0B1853] shadow-md p-3">
             <LockOpen1Icon className="h-8 w-8 text-[#2d9ee0]" />
             <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#94c3ff] via-[#2d9ee0] to-[#5e9ae8]">
               Secure Tokenization
@@ -62,7 +65,7 @@ export default async function HeroSection() {
             </p>
           </div>
           {/* Feature 2 */}
-          <div className="space-y-4 rounded-lg bg-[#0b203a] shadow-md">
+          <div className="space-y-4 rounded-lg bg-[#0B1853] shadow-md p-3">
             <ArrowRightIcon className="h-8 w-8 text-[#2d9ee0]" />
             <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#94c3ff] via-[#2d9ee0] to-[#5e9ae8]">
               Scalable Platform
@@ -73,7 +76,7 @@ export default async function HeroSection() {
             </p>
           </div>
           {/* Feature 3 */}
-          <div className="space-y-4 rounded-lg bg-[#0b203a] shadow-md">
+          <div className="space-y-4 rounded-lg bg-[#0B1853] shadow-md p-3">
             <ArrowRightIcon className="h-8 w-8 text-[#2d9ee0]" />
             <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#94c3ff] via-[#2d9ee0] to-[#5e9ae8]">
               Regulatory Compliance

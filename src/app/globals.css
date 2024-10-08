@@ -65,7 +65,7 @@
      URL: https://gradient.page */
 
   /* CSS: .bg-gradient { background: var(--gradient) } */
-  --gradient: linear-gradient(to top left, #091e3a, #2f80ed, #2d9ee0);
+  --gradient: linear-gradient(to top left, #0b1853, #2f80ed, #2d9ee0);
   --background: 228 98.65% 98.26%;
   --foreground: 228 7.3% 0.52%;
 
@@ -195,3 +195,26 @@ body {
   -webkit-backdrop-filter: blur(14.7px);
   border: 1px solid rgba(255, 255, 255, 1);
 }
+
+.opacity-border {
+  mask-image: 
+    linear-gradient(
+      to bottom,
+      #00000000 0%,    /* Transparente en el top */
+      #000000 10%,                 /* Muy opaco rápidamente en el 10% */
+      rgba(0, 0, 0, 0.1) 80%,      /* Mantener un poco de opacidad hasta el 90% */
+      rgba(0, 0, 0, 0) 100%        /* Transparente en el bottom */
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,         /* Transparente en el left */
+      rgba(0, 0, 0, 1) 50%,        /* Muy opaco en el 10% */
+      rgba(0, 0, 0, 1) 10%,        /* Mantener opaco hasta el 90% */
+      rgba(0, 0, 0, 0) 100%        /* Transparente en el right */
+    );
+  
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
+
+

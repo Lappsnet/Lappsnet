@@ -35,7 +35,7 @@ export default function KeyStatisticsChart() {
         backgroundColor: [
           "#2f80ed",
           "#2d9ee0",
-          "#091e3a",
+          "#0B1853",
           "#1d4ed8",
           "#3b82f6",
         ],
@@ -65,7 +65,7 @@ export default function KeyStatisticsChart() {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto min-h-screen flex flex-col items-center justify-center px-4 md:px-0">
+    <div className="w-full max-w-7xl mx-auto min-h-screen flex flex-col items-center justify-center px-4 md:px-0">
       <h1 className="text-3xl md:text-5xl text-center font-bold mt-4">
         XFY D-Money: $150B Market Cap, 25M Users, $10M Deposits
       </h1>

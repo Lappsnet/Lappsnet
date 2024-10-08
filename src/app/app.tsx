@@ -1,7 +1,7 @@
 import React from "react";
 
 const AppLayo = () => {
-  return <div>AppLayo</div>;
+  return <div></div>;
 };
 
 export default AppLayo;

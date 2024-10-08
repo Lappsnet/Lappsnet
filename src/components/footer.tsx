@@ -1,91 +1,46 @@
 import Link from "next/link";
-import {
-  FacebookIcon,
-  InstagramIcon,
-  MapPinIcon,
-  PhoneIcon,
-  TwitterIcon,
-} from "./icons/icons";
-import { AvatarIcon } from "@radix-ui/react-icons";
+import { FaTwitter } from "react-icons/fa"; // Importar iconos
 
 export const FooterV0 = () => {
   return (
-    <footer className="bg-[#f1f1f1] py-6 md:p-10 w-full bottom-0">
-      <div className="container max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        <div className="grid gap-4">
-          <h3 className="text-lg font-semibold">Contacto</h3>
-          <div className="grid gap-2 text-sm">
-            <div className="flex items-center gap-2">
-              <PhoneIcon className="h-5 w-5" />
-              <span>+(503) 2237-0822</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <AvatarIcon className="h-5 w-5" />
-              <span>@fesapsv</span>
-            </div>
-            <div className="">
-              <Link className="flex items-center gap-2" href={"/direccion"}>
-                <MapPinIcon className="h-5 w-5" />
-                <span>San Salvador, 1a calle poniente</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <h3 className="text-lg font-semibold">Sobre Nosotros</h3>
-          <div className="grid  ">
-            <p className="text-[0.8rem] md:text-[0.9rem]">
-              Somos una organización deportiva que promueve, fomenta, organiza y
-              desarrolla el deporte del patinaje.
-            </p>
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <h3 className="text-lg font-semibold">Enlaces Útiles</h3>
-          <div className="grid gap-2 text-sm">
-            <Link href="/" prefetch={false}>
-              Inicio
-            </Link>
-            <Link href="/" prefetch={false}>
-              Servicios
-            </Link>
-            <Link href="/" prefetch={false}>
-              Portafolio
-            </Link>
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <h3 className="text-lg font-semibold">Síguenos</h3>
-          <div className="grid gap-2 text-sm">
+    <footer className="bg-[#23213a] rounded-l shadow">
+      <div className="mx-auto w-full max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span className="text-sm text-white sm:text-center">
+          © 2024
+          <a href="#" className="hover:underline">
+            XFY D-Money™
+          </a>
+          All Rights Reserved.
+        </span>
+        <ul className="mt-3 flex flex-wrap items-center text-sm font-medium text-white sm:mt-0">
+          <li>
             <Link
-              href="https://www.facebook.com/fesapsv"
-              className="flex items-center gap-2"
-              target="_blank"
-              prefetch={false}
+              href="/"
+              className="flex items-center me-4 hover:underline md:me-6"
             >
-              <FacebookIcon className="h-5 w-5" />
-              Facebook
+              About
             </Link>
+          </li>
+          <li>
             <Link
-              href="https://x.com/indeselsalvador/status/1809617334987804799"
-              className="flex items-center gap-2"
-              target="_blank"
-              prefetch={false}
+              href="/"
+              className="flex items-center me-4 hover:underline md:me-6"
             >
-              <TwitterIcon className="h-5 w-5" />
-              Twitter
+              Licensing
             </Link>
-            <Link
-              href="https://www.instagram.com/fesapsv"
-              className="flex items-center gap-2"
+          </li>
+
+          <li>
+            <a
+              href="https://x.com/XFYMoney"
               target="_blank"
-              prefetch={false}
+              rel="noopener noreferrer"
+              className="flex items-center me-4 hover:underline md:me-6 px-4"
             >
-              <InstagramIcon className="h-5 w-5" />
-              Instagram
-            </Link>
-          </div>
-        </div>
+              <FaTwitter className="mr-1" /> {/* Icono para "Twitter" */}
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   );
