@@ -19,7 +19,7 @@ export default async function AboutSection() {
       {/* Imagen y Datos del CEO */}
       <div className="w-full md:w-1/3 flex flex-col items-center">
         <img
-          src="/logo.png"
+          src="/jon-ceo.jpg"
           alt="Jonathan Cruz - CEO"
           className="w-40 h-40 md:w-56 md:h-56 rounded-xl object-cover mb-6"
         />
@@ -27,6 +27,11 @@ export default async function AboutSection() {
         <p className="text-sm md:text-base text-gray-600 text-center mt-1">
           CEO
         </p>
+        <img
+          src="/solologo.png"
+          alt="XFY Tokenization Engine"
+          className="w-10 h-10 md:w-20 md:h-20 rounded-xl object-cover"
+        />
       </div>
     </section>
   );

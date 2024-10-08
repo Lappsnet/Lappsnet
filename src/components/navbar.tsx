@@ -2,7 +2,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { MenuIcon } from "./icons/icons";
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 import Image from "next/image";
 
 export default function NavbarV0() {
@@ -24,12 +30,14 @@ export default function NavbarV0() {
           side="left"
           className="flex flex-col bg-[#091e3a] text-white"
         >
+          <SheetTitle></SheetTitle>
+          <SheetDescription></SheetDescription>
           <div className="flex items-center p-4">
             <Link href="/" prefetch={false} onClick={handleCloseMenu}>
               <Image
-                src="/logo.png"
-                width={70}
-                height={70}
+                src="/logo-white.png"
+                width={230}
+                height={1000}
                 title="Logo"
                 className="h-20"
                 alt="Company Logo"
@@ -72,9 +80,9 @@ export default function NavbarV0() {
         prefetch={false}
       >
         <Image
-          src="/logo.png"
-          width={70}
-          height={130}
+          src="/logo-white.png"
+          width={130}
+          height={50}
           title="Logo"
           className="h-12"
           alt="Company Logo"

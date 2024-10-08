@@ -2,9 +2,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
-import { FooterV0 } from "@/components/footer";
-import "./globals.css";
+
 import NavbarV0 from "@/components/navbar";
+import { FooterV0 } from "@/components/footer";
+
+import "../../../src/app/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +14,6 @@ export const metadata: Metadata = {
   title: "lappsnet",
   description: "lappsnet website.",
 };
-
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -20,9 +21,12 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="es" className="h-full">
+       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={`${inter.className} flex flex-col min-h-full`}>
         <NextTopLoader />
-        <NavbarV0/>
+        <NavbarV0 />
         <main className="flex-grow">{children}</main>
         <FooterV0 />
       </body>
